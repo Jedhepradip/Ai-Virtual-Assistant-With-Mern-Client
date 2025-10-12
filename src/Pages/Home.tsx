@@ -28,6 +28,7 @@ const Home: React.FC = () => {
         fetchUser();
     }, []);
 
+    
     return (
         <div className="p-6 text-white">
             {user ? (
