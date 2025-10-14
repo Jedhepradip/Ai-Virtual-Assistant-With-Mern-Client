@@ -25,6 +25,7 @@ const Home: React.FC = () => {
             }
         };
 
+        
         fetchUser();
     }, []);
 
