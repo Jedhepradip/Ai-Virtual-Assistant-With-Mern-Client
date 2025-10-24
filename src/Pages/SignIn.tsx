@@ -20,7 +20,7 @@ const SignIn: React.FC = () => {
     const Navigate = useNavigate()
 
     const onSubmit = async (data: SignInFormData) => {
-        setLoading(true)
+        setLoading(true);
         try {
             const formData = new FormData();
             formData.append("email", data.email);
@@ -120,8 +120,8 @@ const SignIn: React.FC = () => {
                     type="submit"
                     disabled={loading}
                     className={`min-w-[150px] cursor-pointer h-[51px] mt-[20px] text-black font-semibold text-[19px] bg-white rounded-full transition-all duration-200 ${loading
-                            ? "opacity-60 cursor-not-allowed"
-                            : "hover:bg-blue-400 hover:text-white"
+                        ? "opacity-60 cursor-not-allowed"
+                        : "hover:bg-blue-400 hover:text-white"
                         }`}
                 >
                     {loading ? "Signing in..." : "Sign In"} {/* ✅ dynamic label */}

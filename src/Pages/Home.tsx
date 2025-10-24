@@ -8,6 +8,7 @@ interface User {
 }
 
 const Home: React.FC = () => {
+    
     const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
