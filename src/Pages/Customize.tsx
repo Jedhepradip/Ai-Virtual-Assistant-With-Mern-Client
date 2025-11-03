@@ -39,24 +39,17 @@ const Customize: React.FC = () => {
                     <Cart key={index} image={img} />
                 ))}
 
-                {frontendImage && <Cart image={frontendImage} />}
-
-                <div
+                {frontendImage ? <Cart image={frontendImage} /> : <div
                     onClick={() => inputImageRef.current?.click()}
                     className="w-[185px] h-[250px] bg-[#030326] border-2 border-[#0c0c8f] rounded-2xl flex justify-center items-center
-          hover:scale-105 transition-transform duration-300 cursor-pointer hover:shadow-lg hover:shadow-blue-500/50"
-                >
+                    hover:scale-105 transition-transform duration-300 cursor-pointer hover:shadow-lg hover:shadow-blue-500/50">
                     <Upload className="w-16 h-16 text-white" />
-                </div>
+                </div>}
 
-                <input
-                    type="file"
-                    accept="image/*"
-                    ref={inputImageRef}
-                    hidden
-                    onChange={handleImage}
-                />
+                <input type="file" accept="image/*" ref={inputImageRef} hidden onChange={handleImage}/>
+
             </div>
+            <button className='py-2 px-10 bg-white text-black rounded-full text-2xl mt-5 font-semibold'>Next</button>
         </div>
     )
 }
